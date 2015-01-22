@@ -1,240 +1,240 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Blog",
-    "description": "This is a blog api",
+    "title": "Comment",
+    "description": "This is a comment api",
     "termsOfService": "http://stack.network/terms-of-service.html",
     "version": "v1"
   },
-  "host": "blog.api.kinlane.com",
+  "host": "comment.api.kinlane.com",
   "basePath": "/",
   "schemes": [
     "http"
   ],
   "produces": [
-    "bloglication/json"
+    "application/json"
   ],
   "paths": {
-    "/blog/": {
+    "/comment/": {
       "get": {
-        "summary": "retrieves all blogs",
-        "description": "pulls all blogs, with filter by keyword",
-        "operationId": "getBlogs",
+        "summary": "retrieves all comments",
+        "description": "pulls all comments, with filter by keyword",
+        "operationId": "getComments",
         "parameters": [
           {
             "name": "query",
             "in": "query",
-            "description": "a text query to search across blog",
+            "description": "a text query to search across comment",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "blog response",
+            "description": "comment response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/blog"
+                "$ref": "#/definitions/comment"
               }
             }
           }
         },
         "tags": [
-          "blog",
-          "blogging"
+          "comment",
+          "commentging"
         ]
       },
       "post": {
-        "summary": "add blog",
-        "description": "add a new blog",
-        "operationId": "addBlog",
+        "summary": "add comment",
+        "description": "add a new comment",
+        "operationId": "addComment",
         "parameters": [
           {
             "name": "name",
             "in": "query",
-            "description": "name of the blog",
+            "description": "name of the comment",
             "required": true,
             "type": "string"
           },
           {
             "name": "description",
             "in": "query",
-            "description": "description of the blog",
+            "description": "description of the comment",
             "required": true,
             "type": "string"
           },
           {
             "name": "url",
             "in": "query",
-            "description": "url for the blog",
+            "description": "url for the comment",
             "required": true,
             "type": "string"
           },
           {
             "name": "tags",
             "in": "query",
-            "description": "tags for the blog",
+            "description": "tags for the comment",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "blog response",
+            "description": "comment response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/blog"
+                "$ref": "#/definitions/comment"
               }
             }
           }
         },
         "tags": [
-          "blog",
-          "blogging"
+          "comment",
+          "commentging"
         ]
       }
     },
-    "/blog/{slug}": {
+    "/comment/{slug}": {
       "get": {
-        "summary": "Retrieve a blog using its slug",
-        "description": "Returns the blog detail",
-        "operationId": "getBlog",
+        "summary": "Retrieve a comment using its slug",
+        "description": "Returns the comment detail",
+        "operationId": "getComment",
         "parameters": [
           {
             "name": "slug",
             "in": "path",
-            "description": "slug for the blog, notice this is in the path, not a query variable",
+            "description": "slug for the comment, notice this is in the path, not a query variable",
             "required": true,
             "type": "integer"
           }
         ],
         "responses": {
           "200": {
-            "description": "blog response",
+            "description": "comment response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/blog"
+                "$ref": "#/definitions/comment"
               }
             }
           }
         },
         "tags": [
-          "blog",
-          "blogging"
+          "comment",
+          "commentging"
         ]
       },
       "put": {
-        "summary": "update blog",
-        "description": "update blog",
-        "operationId": "updateBlog",
+        "summary": "update comment",
+        "description": "update comment",
+        "operationId": "updateComment",
         "parameters": [
           {
             "name": "slug",
             "in": "path",
-            "description": "unique slug for the blog",
+            "description": "unique slug for the comment",
             "required": true,
             "type": "string"
           },
           {
             "name": "name",
             "in": "query",
-            "description": "name of the blog",
+            "description": "name of the comment",
             "required": true,
             "type": "string"
           },
           {
             "name": "description",
             "in": "query",
-            "description": "description of the blog",
+            "description": "description of the comment",
             "required": true,
             "type": "string"
           },
           {
             "name": "url",
             "in": "query",
-            "description": "url for the blog",
+            "description": "url for the comment",
             "required": true,
             "type": "string"
           },
           {
             "name": "tags",
             "in": "query",
-            "description": "tags for the blog",
+            "description": "tags for the comment",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "blog response",
+            "description": "comment response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/blog"
+                "$ref": "#/definitions/comment"
               }
             }
           }
         },
         "tags": [
-          "blog",
-          "blogging"
+          "comment",
+          "commentging"
         ]
       },
       "delete": {
-        "summary": "delete blog",
-        "description": "deletes an blog",
-        "operationId": "deleteBlog",
+        "summary": "delete comment",
+        "description": "deletes an comment",
+        "operationId": "deleteComment",
         "parameters": [
           {
             "name": "slug",
             "in": "path",
-            "description": "unique slug for the blog",
+            "description": "unique slug for the comment",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "blog response",
+            "description": "comment response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/blog"
+                "$ref": "#/definitions/comment"
               }
             }
           }
         },
         "tags": [
-          "blog",
-          "blogging"
+          "comment",
+          "commentging"
         ]
       }
     }
   },
   "definitions": {
-    "blog": {
+    "comment": {
       "properties": {
         "name": {
-          "description": "name of the blog",
+          "description": "name of the comment",
           "type": "string"
         },
         "description": {
-          "description": "description of the blog",
+          "description": "description of the comment",
           "type": "string"
         },
         "url": {
-          "description": "url for the blog",
+          "description": "url for the comment",
           "type": "string"
         },
         "tags": {
-          "description": "tags for the blog",
+          "description": "tags for the comment",
           "type": "string"
         },
         "slug": {
-          "description": "slug for the blog",
+          "description": "slug for the comment",
           "type": "string"
         }
       }
