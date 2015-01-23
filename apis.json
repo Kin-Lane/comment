@@ -1,7 +1,7 @@
 {
   "name": "Stack Network - Comment",
   "description": "This is my default comment API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
-  "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-comment-icon.png",
+  "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-comment-bubbles.png",
   "tags": [
     "application programming interface",
     "API",
@@ -15,7 +15,7 @@
     {
       "name": "Comment",
       "description": "A comment API resource.",
-      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-comment-icon.png",
+      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-comment-bubbles.png",
       "humanURL": "https://kin-lane.github.io/comment/",
       "baseURL": "http://comment.api.kinlane.com",
       "tags": [
