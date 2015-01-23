@@ -1,5 +1,5 @@
 {
-  "name": "Stack Network - Comment",
+  "name": "Kin Lane - Comment",
   "description": "This is my default comment API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
   "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-comment-bubbles.png",
   "tags": [
